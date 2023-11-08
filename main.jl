@@ -24,7 +24,7 @@ participant_interview = read_interview("MONO-016.txt")
 answers = parse_lines_to_q_a(participant_interview)[2]
 
 sampled_answers = answers[1:15]
-replace!(sampled_answers, "\f" => "")
+replace!(sampled_answers, "\f" => "") # causing some JSON funkiness in the API response.
 
 input_message = Dict(
     "role" => "user",
@@ -43,4 +43,4 @@ df = instances_to_df(r)
 
 df_w_participant_info = crossjoin(generate_participant_row(participant_1), df)
 
-df_w_participant_info |> view_df
+df_w_participant_info

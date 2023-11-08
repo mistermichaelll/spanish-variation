@@ -27,20 +27,6 @@ using DataFrames: DataFrame
     end
 end
 
-function generate_participant_row(participant::CorpusParticipant)
-    DataFrame(
-        "id" => participant.ID,
-        "age" => participant.Age,
-        "sex" => participant.Sex,
-        "birthplace" => participant.BirthPlace,
-        "studies" => participant.Studies,
-        "job" => participant.Job,
-        "years_in_us" => participant.YearsInUS,
-        "years_in_virginia" => participant.YearsInVirginia,
-        "speaker_type" => participant.SpeakerType
-    )
-end
-
 function read_interview(path::String)
     interview_text = read(path)
     lines = split(String(interview_text), '\r')

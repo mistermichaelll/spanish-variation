@@ -1,5 +1,5 @@
 const prompt = """
-Your role is to identify 'marcadors de discursivo' in interview transcriptions.
+Your role is to identify 'marcadores discursivos' in interview transcriptions.
 
 These markers may include specific words and phrases such as 'este' and its variations, 'uh,' 'um,' 'uhhh,' 'um,' 'entonces,' and 'eh.'
 

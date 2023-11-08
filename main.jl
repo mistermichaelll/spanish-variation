@@ -8,16 +8,16 @@ using JSON3
 using .OpenAIHelpers
 
 participant_1 = CorpusParticipant(
-    "MONO-016",
-    21,
-    "M",
-    "Lima, Peru",
-    "university-college",
-    "skilled-worker",
-    5,
-    5,
-    "first-generation"
-)
+    ID = "MONO-016",
+    Age = 21,
+    Sex = "M",
+    BirthPlace = "Lima, Peru",
+    Studies = "university-college",
+    Job = "skilled-worker",
+    YearsInUS = 5,
+    YearsInVirginia = 5,
+    SpeakerType = "first-generation"
+).generate_participant_row()
 
 participant_interview = read_interview("MONO-016.txt")
 answers = parse_lines_to_q_a(participant_interview)[2]
@@ -40,6 +40,4 @@ r = get_gpt_chat_completion(
 
 df = instances_to_df(r)
 
-df_w_participant_info = crossjoin(generate_participant_row(participant_1), df)
-
-df_w_participant_info |> view_df
+df_w_participant_info = crossjoin(participant_1, df)

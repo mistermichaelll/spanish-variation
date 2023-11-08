@@ -2,7 +2,7 @@ module CorpusHelpers
 
 using DataFrames: DataFrame
 
-struct CorpusParticipant
+@kwdef struct CorpusParticipant
     ID::String
     Age::Int
     Sex::String
@@ -12,6 +12,19 @@ struct CorpusParticipant
     YearsInUS::Int
     YearsInVirginia::Int
     SpeakerType::String
+    generate_participant_row::Function = function()
+        DataFrame(
+            "id" => ID,
+            "age" => Age,
+            "sex" => Sex,
+            "birthplace" => BirthPlace,
+            "studies" => Studies,
+            "job" => Job,
+            "years_in_us" => YearsInUS,
+            "years_in_virginia" => YearsInVirginia,
+            "speaker_type" => SpeakerType
+        )
+    end
 end
 
 function generate_participant_row(participant::CorpusParticipant)

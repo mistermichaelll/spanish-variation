@@ -6,7 +6,6 @@ using .CorpusHelpers
 using DataFrames
 using JSON3
 using .OpenAIHelpers
-using Random: shuffle
 
 participant_1 = CorpusParticipant(
     "MONO-016",

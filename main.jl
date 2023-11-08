@@ -22,7 +22,7 @@ participant_1 = CorpusParticipant(
 participant_interview = read_interview("MONO-016.txt")
 answers = parse_lines_to_q_a(participant_interview)[2]
 
-sampled_answers = answers[1:15]
+sampled_answers = answers[1:20]
 replace!(sampled_answers, "\f" => "") # causing some JSON funkiness in the API response.
 
 input_message = Dict(

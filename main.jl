@@ -42,4 +42,4 @@ df = instances_to_df(r)
 
 df_w_participant_info = crossjoin(generate_participant_row(participant_1), df)
 
-df_w_participant_info
+df_w_participant_info |> view_df

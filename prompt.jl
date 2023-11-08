@@ -17,24 +17,22 @@ instances:
     [
         {
             "instance_no": 1,
-            "word": "the identified word or phrase",
-            "word_before": "the word or phrase preceding it",
-            "word_after": "the word or phrase following it",
-            "phrase_before": "the phrase before the identified word or phrase",
-            "phrase_after": "the phrase after the identified word or phrase"
+            "marcador": "uh",
+            "word_before": "este",
+            "word_after": "parte",
+            "phrase_before": "que mi favorita es este",
+            "phrase_after": "del mar en cual"
         },
         {
             "instance_no": 2,
-            "word": "the identified word or phrase",
-            "word_before": "the word or phrase preceding it",
-            "word_after": "the word or phrase following it",
-            "phrase_before": "the phrase before the identified word or phrase",
-            "phrase_after": "the phrase after the identified word or phrase"
+            "marcador": "uh",
+            "word_before": "pintor",
+            "word_after": "una",
+            "phrase_before": "yo pienso de este pintor",
+            "phrase_after": "una artista que"
         }
     ]
 }
-
-Please ensure that the JSON includes no stray characters, such as "\f", that could result in an EOF error.
 
 Please focus on the specified markers and provide the requested details in the JSON format without additional commentary.
 """

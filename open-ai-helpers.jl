@@ -1,5 +1,6 @@
 module OpenAIHelpers
 
+using DataFrames: DataFrame
 using HTTP: request
 using JSON3
 

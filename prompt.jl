@@ -30,6 +30,14 @@ instances:
             "word_after": "una",
             "phrase_before": "yo pienso de este pintor",
             "phrase_after": "una artista que"
+        },
+        {
+            "instance_no": 1,
+            "marcador": "este",
+            "word_before": "con",
+            "word_after": "hombre",
+            "phrase_before": "estaba hablando con",
+            "phrase_after": "hombre que me llamó"
         }
     ]
 }
